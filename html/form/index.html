@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Forms</h1>
+    <form action="">
+      <div>
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter your username"
+          autofocus
+        />
+      </div>
+      <div>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female" />
+        <label for="female">Female</label>
+      </div>
+      <div>
+        <label for="subscribe">Subscribe</label>
+        <input type="checkbox" name="subscribe" id="subscribe" />
+      </div>
+      <div>
+        <label for="comment"> Enter your comment here...</label>
+        <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+      </div>
+      <div>
+        <label for="fruits">Fruits</label>
+        <select name="fruits" id="fruits">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="cherry">Cherry</option>
+        </select>
+      </div>
+    </form>
+  </body>
+</html>
+<!-- 
+    GET Request -> we never sent password in this
+    POST Request -> 
+ -->

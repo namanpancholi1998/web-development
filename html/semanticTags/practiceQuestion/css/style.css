@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  /* display: flex; */
+  background-color: rgb(41, 40, 40);
+  color: rgb(232, 228, 228);
+  height: 40px;
+  width: 100vw;
+}
+
+#nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul li {
+  display: block;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+      /* Element Selector */
+      /*div {
+        background-color: red;
+        color: white;
+      }*/
+
+      /* Class Selector */
+      .red {
+        color: red;
+      }
+
+      /* ID Selector */
+      #green {
+        background-color: green;
+        color: white;
+      }
+
+      /* Child Selector */
+      div > p {
+        color: whitesmoke;
+        background-color: cadetblue;
+      }
+
+      /* Descendant Selector */
+      div p {
+        background-color: chartreuse;
+      }
+
+      /* Universal Selector */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Pseudo Selector */
+      a:visited {
+        color: burlywood;
+      }
+      a:link {
+        color: cadetblue;
+      }
+      a:active {
+        background-color: chocolate;
+      }
+      a:hover {
+        background-color: violet;
+      }
+
+      p:first-child {
+        background-color: turquoise;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Element Selector  -->
+    <div>I am Element Selector</div>
+
+    <!-- Class Selector -->
+    <div class="red">I am Class Selector</div>
+
+    <!-- ID Selector -->
+    <div id="green">I am ID Selector</div>
+
+    <!-- Child Selector -->
+    <div>
+      <p>I am child Selector</p>
+    </div>
+    <!-- If I do this child selector won't work on p tag -->
+    <div>
+      <article>
+        <p>
+          This will not work because p is not direct child of div in this p is
+          child of article
+        </p>
+      </article>
+    </div>
+
+    <!-- Descendant Selector -->
+
+    <!-- Pseudo Selector -->
+    <a href="https://www.google.com">Go to Google</a>
+  </body>
+</html>

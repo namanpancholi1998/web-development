@@ -1,90 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Selectors</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
     <style>
-      /* Element Selector */
-      /*div {
-        background-color: red;
-        color: white;
-      }*/
+        /* .box:first-child{
+            background-color: red;
+        } */
 
-      /* Class Selector */
-      .red {
-        color: red;
-      }
+        /* .box::first-line{
+            color: yellow;
+        } */
 
-      /* ID Selector */
-      #green {
-        background-color: green;
-        color: white;
-      }
+        /* .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
 
-      /* Child Selector */
-      div > p {
-        color: whitesmoke;
-        background-color: cadetblue;
-      }
+        p, a, .box, [data-color="primary"]{
+            padding-top: 45px;
+        } */
 
-      /* Descendant Selector */
-      div p {
-        background-color: chartreuse;
-      }
+        /* .box:nth-child(odd){
+            background-color: blue;
+        } */
 
-      /* Universal Selector */
-      * {
-        margin: 0;
-        padding: 0;
-      }
+        /* .box:nth-last-child(2){
+            background-color: red;
+        } */
 
-      /* Pseudo Selector */
-      a:visited {
-        color: burlywood;
-      }
-      a:link {
-        color: cadetblue;
-      }
-      a:active {
-        background-color: chocolate;
-      }
-      a:hover {
-        background-color: violet;
-      }
+        .boxes::before {
+            content: "Harry is good";
+            color: blue;
+        }
 
-      p:first-child {
-        background-color: turquoise;
-      }
+        .boxes::after {
+            content: "Sigma course is also good";
+            color: red;
+        }
+
+        ::selection {
+            background-color: black;
+            color: aqua;
+        }
+
+        .box::first-letter {
+            color: peru;
+            font-size: 45px;
+        }
+
+        input::placeholder {
+            color: rgb(84, 84, 88);
+        }
     </style>
-  </head>
-  <body>
-    <!-- Element Selector  -->
-    <div>I am Element Selector</div>
+</head>
 
-    <!-- Class Selector -->
-    <div class="red">I am Class Selector</div>
-
-    <!-- ID Selector -->
-    <div id="green">I am ID Selector</div>
-
-    <!-- Child Selector -->
-    <div>
-      <p>I am child Selector</p>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">I am first box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Type your name here">
     </div>
-    <!-- If I do this child selector won't work on p tag -->
-    <div>
-      <article>
-        <p>
-          This will not work because p is not direct child of div in this p is
-          child of article
-        </p>
-      </article>
-    </div>
+</body>
 
-    <!-- Descendant Selector -->
-
-    <!-- Pseudo Selector -->
-    <a href="https://www.google.com">Go to Google</a>
-  </body>
 </html>

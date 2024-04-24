@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design this Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(38, 37, 37);
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        background-color: rgb(246, 144, 200);
+      }
+      ul li {
+        list-style: none;
+        padding: 10px;
+        color: white;
+        display: inline-block;
+      }
+      .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(1, 146, 1);
+        padding: 30px;
+      }
+      .box {
+        width: 40vw;
+        height: 40vh;
+        background-color: white;
+      }
+      .box1 {
+        background-color: sandybrown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box2 {
+        background-color: tomato;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .welcome-container {
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .welcome-text {
+        width: 50vw;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        border: 2px solid lightgray;
+        border-radius: 10px;
+      }
+      .circle {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: orange;
+        position: absolute;
+        right: 30px;
+        bottom: 55px;
+      }
+      footer {
+        color: white;
+        width: 90vw;
+        margin: auto;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="container">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+      </section>
+      <section class="welcome-container">
+        <p class="welcome-text">Welcome to this page Web Development Express</p>
+        <div class="circle"></div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, culpa!
+        Voluptatibus libero, debitis officia doloremque adipisci sit. Nihil
+        illo, suscipit eveniet maiores perferendis veniam excepturi rerum ipsum
+        atque ab blanditiis ea facilis pariatur expedita, quaerat ullam dolore
+        dolor odit saepe! Minima sint aperiam vitae soluta. At dolore corporis
+        voluptatem totam deserunt sed accusantium dolores alias facilis non,
+        delectus atque qui fuga saepe voluptatibus. Quia dolorum mollitia est
+        vitae fugit repellat? Earum molestiae repudiandae delectus accusamus
+        autem quos obcaecati consequatur quod est sapiente, laborum, suscipit
+        facere dignissimos corporis neque, fugiat nemo laboriosam sint? Ullam
+        quis nemo quia voluptates tempora in corrupti! Lorem ipsum dolor, sit
+        amet consectetur adipisicing elit. Adipisci asperiores, odit non
+        perspiciatis tempore ipsa quisquam dignissimos omnis cumque aperiam
+        totam, distinctio eius architecto possimus sit natus cum voluptates
+        dolores!
+      </p>
+    </footer>
+  </body>
+</html>

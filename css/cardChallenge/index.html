@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Challenge</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgb(237, 234, 234);
+      }
+
+      .card-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 30vw;
+        height: 90vh;
+        padding: 20px;
+        background-color: white;
+        border-radius: 1px solid lightgray;
+        border-radius: 10px;
+      }
+
+      .card-image {
+        border-radius: 10px;
+      }
+      .nature {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        width: 50%;
+      }
+      .nature p {
+        padding: 2px 15px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        color: rgb(90, 89, 89);
+        cursor: pointer;
+      }
+      .card-heading {
+        margin: 10px 0;
+      }
+      .readMore-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .readMore-btn button {
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        font-weight: bold;
+        background-color: rgb(213, 213, 247);
+        color: rgb(50, 50, 252);
+        cursor: pointer;
+      }
+      @media screen and (max-width: 748px) {
+        .card-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          width: 50vw;
+          height: 90vh;
+          padding: 20px;
+          background-color: white;
+          border-radius: 1px solid lightgray;
+          border-radius: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card-container">
+        <img
+          class="card-image"
+          src="https://t4.ftcdn.net/jpg/03/02/88/33/240_F_302883311_TaFYBUa2lHfGhnXdZD4Y65WoowMxFTLZ.jpg"
+          alt="lake-img"
+          height="250px"
+        />
+        <div class="nature">
+          <p>Nature</p>
+          <p>Lake</p>
+        </div>
+        <h1 class="card-heading">Card Heading</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem
+          dolores nobis facilis perspiciatis distinctio similique. Praesentium
+          officia, repudiandae sed voluptas, dolores voluptates recusandae
+          molestiae veritatis eaque voluptate laborum. Ex, et!
+        </p>
+        <div class="readMore-btn">
+          <button>Read More</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

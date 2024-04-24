@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Color WebSite</title>
+    <style>
+      :root {
+        --bgcolor: rgb(0, 255, 76);
+        --homecolor: rgb(255, 99, 99);
+        --aboutcolor: rgb(255, 192, 83);
+        --contactcolor: rgb(83, 221, 255);
+      }
+
+      nav {
+        background-color: var(--bgcolor);
+      }
+      ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+      }
+
+      ul li:first-child {
+        background-color: var(--homecolor);
+        padding: 10px;
+      }
+
+      ul li:nth-child(2) {
+        background-color: var(--aboutcolor);
+        padding: 10px;
+      }
+
+      ul li:nth-child(3) {
+        background-color: var(--contactcolor);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </body>
+</html>
+<!-- 
+    Create a multicolor website which can change color using CSS Variables.
+ -->

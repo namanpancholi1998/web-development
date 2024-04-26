@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 90vw;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  padding: 10px;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+}
+ul li {
+  list-style: none;
+  margin: 0 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  margin: auto;
+}
+
+.download-text {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.download-text p {
+  font-size: 48px;
+  margin-right: 20px;
+}
+
+.download-dsc {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.download-btn {
+  background-color: #00b6d1;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 15px;
+}
+.language-card-container {
+  margin-top: 100px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    gap: 20px;
+  }
+}
+
+.card {
+  text-align: center;
+  background-color: rgba(211, 211, 211, 0.187);
+  padding: 20px;
+}
+
+.card h1 {
+  font-size: 24px;
+}
+
+.card-para {
+  font-size: 12px;
+  font-weight: lighter;
+  padding: 10px;
+}
+
+.download-btn-lang {
+  background-color: #5cb85c;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}

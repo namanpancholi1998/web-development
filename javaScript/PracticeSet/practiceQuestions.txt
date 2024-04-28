@@ -1,0 +1,49 @@
+PRACTICE SET -> 1 (Variables)
+
+1. Create a variable of type string and try to add a number to it.
+2. Use typeOf operator to find the data type of the string in last question No.1
+3. Crete a const object in js can you change it to hold a number later ?
+4. Try to add a new key to the cost object in question No. 3 were you able to it ?
+5. Write a js program to Create a word-meaning dictionary of 5 words.
+
+PRACTICE SET -> 2 (Expressions & Conditionals)
+
+1. Use logical operator to find whether the ge of a person lies between 10 and 20 ?
+2. Demonstrate the use of switch case statments in js.
+3. Write a js program to find whether a number is Divisible by 2 and 3.
+4. Write a js program to find whether a number is Divisible by either 2 or 3.
+5. Print "You can Drive" or "You can not Drive" based on age being grater that 18 using ternarry operator.
+
+PRACTICE SET -> 3 (Loops & Functions)
+
+1. Write a program to print the marks of a student in an object using for loop
+    obj = {naman: 99, shubham: 98, rohit: 50 }
+2. Write the program in Q1 using for in loop.
+3. Write a program to print "try again" until the user enter correct number.
+4. Write a function to find mean of 5 numbers.
+
+PRACTICE SET -> 4 (Strings)
+
+1. What will the following print in js ?
+    console.log(har\"".length);
+2. Explore the includes, startWith & endsWith function of string.
+3. Write a program to convert a given string to lowercase.
+4. Extract the amount out of this string.
+    "Please give Rs 1000"
+5. Try to change 4Th character of a given string were you able to do it ?
+
+PRACTICE SET -> 5 (Arrays)
+
+1. Create an array of numbers and take input from the user to add numbers to this array.
+2. Keep adding numbers to the array in Q1 until 0 is added to the arrat.
+3. filter for number Divisible by 10 from a given array.
+4. Create an array of square of given number
+5. Use reduce to calculate factorial of a given number from an array of first n natural numbers (n being the number whose factorial need to be calculate).
+
+PRACTICE SET -> 6 (Js In Browser)
+
+1. Write a program using prompt function to take input of age as a value from the use and use alert to tell him if he can drive.
+2. In Q1 use cinfirm to ask the user if he wants to see the prompt again.
+3. In the previous question use console.error to log the error if the age entered is negative.
+4. Write a program to change the url to google.com(Redirection) if user enters a number grater than 4
+5. Change the background of the page to yallow red or any other color based on user input prompt.

@@ -1,0 +1,35 @@
+Dom tee refers to the HTML page where all the nodes are objects There can be 3 main types of nodes in the Dom tree:
+    1 text nodes
+    2 elemet nodes
+    3 Comment nodes
+
+
+In an HTML page, <html> is at the root and <head> and <body> are its children, etc.
+
+A text node is always a leaf of the tree
+
+Auto Correction
+    If an erroneous HTML is encountered by the browser it tends to correct it for example, if we but Something after the body, it is is automatically. moved inside the body Another example is  table>  tag which must contain <tbody>
+
+
+Note: document body can sometimes be null if the javascript is written before the body tag.
+
+Children of an element 
+    direct as well as deeply nested elements of an element are called its children.
+
+Child nodes → Elements that are direct children for     example head & body are children of <html>
+
+Descendant nodes ->  All nested elements, children their children and so on...
+
+firstChild, last Child & child Nodes
+
+element First Child -> first child element
+element last Child -> last child element
+element child Nodes → All Child nodes
+
+Following is always true: elem child Nodes [0] === elem first Child
+elem childNodes [elem child Nodes.length-1] === elem last Child
+
+There is also a method elem has Child Nodes () to check whether there are any child nodes.
+
+Note: child Nodes looks like an array But its not actually an array but a collection. We can use Array from (Collection) to Convert it into an Array Array methods wont work

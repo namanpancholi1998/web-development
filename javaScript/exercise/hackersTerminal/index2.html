@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackers Terminal</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .desktop {
+        background-image: url(https://pranx.com/hacker/green-back.jpg);
+        background-size: auto;
+        height: 100vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+      }
+
+      .terminal {
+        width: 50vh;
+        height: 50%;
+        border: 5px solid green;
+        background-color: black;
+      }
+
+      .terminal-bar {
+        height: 20px;
+        background-color: green;
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+      }
+
+      .dots {
+        animation-name: blink;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0.5;
+        }
+        50% {
+          opacity: 1;
+        }
+        75% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        Creating a hacking simulator which has green background and it shows these message with random delay of 1 to 7 seconds 
+
+        Initializing Hacking...
+        Reading your Files...
+        Password files Detected...
+        Sending all passwords and personal files to server...
+        Cleaning up...
+
+        the three dots must blink so that it look like a real terminal
+    -->
+
+    <div class="desktop">
+      <div class="terminal">
+        <div class="terminal-bar">Compiling</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- <div class="message">
+          Initializing Hacking <span class="dots">.
+          <span class="dots">. <span class="dots">.</span></span></span>
+        </div>
+        <div class="message">
+          Reading your Files<span class="dots">.
+            <span class="dots">. <span class="dots">.</span></span></span>
+        </div>
+        <div class="message">
+          Password files Detected<span class="dots">.
+            <span class="dots">. <span class="dots">.</span></span></span>
+        </div>
+        <div class="message">
+          Sending all passwords and personal files to server<span class="dots">.
+            <span class="dots">. <span class="dots">.</span></span></span>
+          
+        </div>
+        <div class="message">Cleaning up<span class="dots">.
+            <span class="dots">. <span class="dots">.</span></span></span>
+      </div> -->

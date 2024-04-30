@@ -1,3 +1,19 @@
+let boxes = document.getElementsByClassName("box");
+
+// console.log(boxes);
+
+function getRandomColor() {
+  let r = Math.ceil(0 + Math.random() * 255);
+  let g = Math.ceil(0 + Math.random() * 255);
+  let b = Math.ceil(0 + Math.random() * 255);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+Array.from(boxes).forEach((box) => {
+  box.style.backgroundColor = getRandomColor();
+  box.style.color = getRandomColor();
+});
+
 // const boxColors = [
 //   {
 //     color: "red",
@@ -42,19 +58,3 @@
 
 // document.getElementById("box5").style.color = "brown";
 // document.getElementById("box5").style.backgroundColor = "yellow";
-
-let boxes = document.getElementsByClassName("box");
-
-// console.log(boxes);
-
-function getRandomColor() {
-  let r = Math.ceil(0 + Math.random() * 255);
-  let g = Math.ceil(0 + Math.random() * 255);
-  let b = Math.ceil(0 + Math.random() * 255);
-  return `rgb(${r}, ${g}, ${b})`;
-}
-
-Array.from(boxes).forEach((box) => {
-  box.style.backgroundColor = getRandomColor();
-  box.style.color = getRandomColor();
-});

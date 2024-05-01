@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --a: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+/* Left Section */
+.left {
+  width: 20vw;
+  padding: 10px;
+}
+
+/* Home */
+.home ul li {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  width: 14px;
+  padding-top: 14px;
+  font-weight: bold;
+}
+
+/* library */
+.library {
+  min-height: 70vh;
+  position: relative;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: bold;
+}
+.heading img {
+  width: 30px;
+}
+
+/* library Footer */
+.footer {
+  display: flex;
+  font-size: 7px;
+
+  color: grey;
+  gap: 5px;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
+}
+.footer a {
+  color: grey;
+}
+
+/* Right Section */
+.right {
+  width: 80vw;
+  margin: 16px 0;
+  position: relative;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(34, 34, 34);
+}
+
+.header > * {
+  padding: 20px;
+}
+
+.spotifyPlaylist {
+  padding: 16px;
+}
+
+.spotifyPlaylist h1 {
+  padding: 16px;
+}
+
+.pouplarArtists {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.artistCardContainer {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-around;
+
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.cardArtist {
+  width: 150px;
+  height: 200px;
+  padding: 10px;
+  position: relative;
+  transition: all 0.9s;
+}
+.cardArtist:hover {
+  background-color: rgb(37, 36, 36);
+  cursor: pointer;
+  --a: 1;
+}
+
+.cardArtist > * {
+  padding-top: 10px;
+}
+
+.cardArtist img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.greenPlayBtn {
+  background-color: #1dce5d;
+  z-index: 1;
+  position: absolute;
+  bottom: 30%;
+  right: 10%;
+  visibility: hidden;
+  transition: visibility 0.2s ease;
+}
+.cardArtist:hover .greenPlayBtn {
+  visibility: visible;
+}
+
+.cardArtist p {
+  font-size: 14px;
+  color: gray;
+}

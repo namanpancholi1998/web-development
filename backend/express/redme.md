@@ -35,10 +35,42 @@
    -> app.get().post().put().delete() like this
 
 3. Serving HTML Files
-   ->
+   -> Serving files in Express is the process of making static files, such as HTML, CSS, images, and JavaScript, available to clients through an Express application. Express provides a built-in middleware function called express.static() that allows you to serve static files in your application.
 
 4. Installing Postman
    -> https://www.postman.com/downloads/
 
 5. Express Router
-   ->
+   -> The express. Router() function is used to create a new router object. This function is used when you want to create a new router object in your program to handle requests. Multiple requests can be easily differentiated with the help of the Router() function in Express.
+
+<!-- Middlewares in Express 03 -->
+
+->> Middleware use for Logging Cookies isLoggedIn
+
+Types of Middleware ->
+-> 1. Application Level Middleware
+-> 2. Router Level Middleware
+-> 3. Error Handling Middleware
+-> 4. Built-in Middleware
+-> 5. Third-party Middleware
+
+<!-- Exercise 15 - Clear the Clutter -->
+
+You have to write a NodeJs Program to clear clutter inside of a directory and organize the contents of that directory inti different folders
+
+for examples These files become:
+
+1. name.jpg
+2. name.png
+3. this.pdf
+4. naman.zip
+5. arpit.zip
+6. cat.jpg
+
+this:
+jpg/name.jpg, jpg/cat.jpg
+png/name.png
+zip/naman.zip, zip/arpit.zip
+pdf/this.pdf
+
+<!-- ejs Template Engine in Express 04 -->

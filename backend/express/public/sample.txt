@@ -1,0 +1,2 @@
+This file will show on browser Because this file is in public folder 
+app.use(express.static("public")) 

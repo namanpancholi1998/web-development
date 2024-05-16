@@ -36,6 +36,11 @@
             />
             <h2>Your library</h2>
           </div>
+          <div class="songs_list">
+            <ul></ul>
+          </div>
+
+          <!-- FOOTER -->
           <div class="footer">
             <div>
               <a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a>
@@ -103,8 +108,8 @@
             </svg>
           </div>
           <div class="buttons">
-            <button>Sign Up</button>
-            <button>Log In</button>
+            <button class="signUpBtn">Sign Up</button>
+            <button class="logInBtn">Log In</button>
           </div>
         </div>
         <div class="spotifyPlaylist">
@@ -204,7 +209,27 @@
             </div>
           </div>
         </div>
+        <div class="playBar">
+          <div class="seekbar">
+            <div class="circle"></div>
+          </div>
+          <div class="info">
+            <div class="song_info"></div>
+            <div class="songs_btn">
+              <img
+                id="previous"
+                src="./assets/icon/prevsong.svg"
+                alt="prevbtn"
+              />
+              <img id="play" src="./assets/icon/play.svg" alt="playbtn" />
+              <img id="next" src="./assets/icon/nextsong.svg" alt="nextbtn" />
+            </div>
+            <div class="song_time"></div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

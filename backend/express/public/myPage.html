@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page</title>
+  </head>
+  <body>
+    <!-- 1. Handling Post and other request -->
+    <!-- <script>
+      async function testPost() {
+        let a = await fetch("/", { method: "POST" });
+        let b = await a.text();
+
+        console.log(b, "Testing Request Post");
+      }
+      testPost();
+
+      async function testPut() {
+        let a = await fetch("/", { method: "PUT" });
+        let b = await a.text();
+
+        console.log(b, "Testing Request Put");
+      }
+      testPut();
+
+      async function testDelete() {
+        let a = await fetch("/", { method: "DELETE" });
+        let b = await a.text();
+
+        console.log(b, "Testing Request Delete");
+      }
+      testDelete();
+    </script> -->
+
+    <!-- 2. Chaining of request -->
+    <script>
+      async function testPost() {
+        let a = await fetch("/about", { method: "POST" });
+        let b = await a.text();
+
+        console.log(b, "Testing Request Post");
+      }
+      testPost();
+
+      async function testPut() {
+        let a = await fetch("/about", { method: "PUT" });
+        let b = await a.text();
+
+        console.log(b, "Testing Request Put");
+      }
+      testPut();
+
+      async function testDelete() {
+        let a = await fetch("/about", { method: "DELETE" });
+        let b = await a.text();
+
+        console.log(b, "Testing Request Delete");
+      }
+      testDelete();
+    </script>
+  </body>
+</html>

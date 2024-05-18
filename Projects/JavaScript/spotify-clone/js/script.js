@@ -1,10 +1,12 @@
 let currSong = new Audio();
 let secondsToMinutesSeconds;
-async function getSong() {
-  let req = await fetch("http://127.0.0.1:3000/assets/songs/");
+let songs;
+let currFolder;
+async function getSong(folder) {
+  currFolder = folder;
+  console.log(currFolder);
+  let req = await fetch(`/${folder}/`);
   let res = await req.text();
-  //   console.log(res);
-
   let div = document.createElement("div");
   div.innerHTML = res;
 
@@ -13,7 +15,7 @@ async function getSong() {
   for (let i = 0; i < as.length; i++) {
     const element = as[i];
     if (element.href.endsWith(".mp3")) {
-      songs.push(element.href.split("/assets/songs/")[1]);
+      songs.push(element.href.split(`${folder}/`)[1]);
       //   console.log(element);
       //   console.log(element.href.split("/assets/songs/")[1]);
     }
@@ -22,7 +24,7 @@ async function getSong() {
 }
 
 function playSong(song, pause = false) {
-  currSong.src = "/assets/songs/" + song;
+  currSong.src = `${currFolder}/` + song;
   if (!pause) {
     currSong.play();
     play.src = "./assets/icon/pause.svg";
@@ -34,7 +36,7 @@ function playSong(song, pause = false) {
 
 async function main() {
   // Get the list of all the songs
-  let songs = await getSong();
+  songs = await getSong("assets/songs");
 
   playSong(songs[0], true);
   //   play.src = "./assets/icon/play.svg";
@@ -45,7 +47,7 @@ async function main() {
     .getElementsByTagName("ul")[0];
   for (const song of songs) {
     songUL.innerHTML += ` 
-        <li>
+        <li class="ele">
             <img
                 class="invert"
                 width="20"
@@ -59,7 +61,7 @@ async function main() {
                   .split("-")[1]
                   .replace(".mp3", "")}</div>
             </div>
-            <div class="playnow">
+            <div class="playnow invert">
                 <img src="./assets/icon/play.svg" alt="play" />
             </div>
         </li>
@@ -93,7 +95,7 @@ async function main() {
 
     //   Add an style to the circle
     document.querySelector(".circle").style.left =
-      (currSong.currentTime / currSong.duration) * 100 + "%";
+      (currSong.currentTime / currSong.duration) * 99 + "%";
   });
 
   // Add an event listener to the seekbar
@@ -101,6 +103,57 @@ async function main() {
   seekbar.addEventListener("click", (e) => {
     let percent = (e.offsetX / seekbar.offsetWidth) * 100;
     currSong.currentTime = (currSong.duration * percent) / 100;
+  });
+
+  // Add an event listener to the next button
+  next.addEventListener("click", () => {
+    currSong.pause();
+    currSong.currentTime = 0;
+    let index = songs.indexOf(currSong.src.split("/assets/songs/")[1]);
+    if (index === songs.length - 1) {
+      playSong(songs[0], false);
+    } else {
+      playSong(songs[index + 1], false);
+    }
+  });
+
+  // Add an event listener to the previous button
+  previous.addEventListener("click", () => {
+    currSong.pause();
+    currSong.currentTime = 0;
+    let index = songs.indexOf(currSong.src.split("/assets/songs/")[1]);
+    console.log(songs.indexOf(currSong.src.split("/assets/songs/")[1]));
+    if (index === 0) {
+      playSong(songs[songs.length - 1], false);
+    } else {
+      playSong(songs[index - 1], false);
+    }
+  });
+
+  // add an event listener to the volume seekbar
+  let volumeSeekbar = document.querySelector(".volume_seekbar");
+  volumeSeekbar.addEventListener("click", (e) => {
+    let percent = (e.offsetX / volumeSeekbar.offsetWidth) * 100;
+    currSong.volume = percent / 100;
+  });
+
+  // add an event listener to the volume_circle
+  let volumeCircle = document.querySelector(".volume_circle");
+  volumeSeekbar.addEventListener("click", () => {
+    volumeCircle.style.left = currSong.volume * 87 + "%";
+  });
+
+  // Add an event listener to the volume button
+  volume.addEventListener("click", () => {
+    if (currSong.muted) {
+      currSong.muted = false;
+      volumeCircle.style.left = currSong.volume * 87 + "%";
+      volume.src = "./assets/icon/volume.svg";
+    } else {
+      currSong.muted = true;
+      volumeCircle.style.left = "0";
+      volume.src = "./assets/icon/mute.svg";
+    }
   });
 }
 
@@ -117,4 +170,17 @@ secondsToMinutesSeconds = (seconds) => {
 
   return `${formattedMinutes}:${formattedSeconds}`;
 };
+
+// Add an event listener to the hamburger
+let hamburger = document.querySelector(".hamburger");
+hamburger.addEventListener("click", () => {
+  document.querySelector(".left").style.left = "0";
+});
+
+// add an event listener to the close button
+let close = document.querySelector(".close");
+close.addEventListener("click", () => {
+  document.querySelector(".left").style.left = "-500px";
+});
+
 main();

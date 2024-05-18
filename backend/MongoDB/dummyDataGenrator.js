@@ -27,7 +27,11 @@ const port = 3000;
 
 app.get("/", async (req, res) => {
   await Employee.deleteMany({});
+  await createRandomData();
+  res.send("Data Generated!");
+});
 
+async function createRandomData() {
   for (let i = 0; i < 10; i++) {
     const employee = new Employee({
       name: generateRandomName(),
@@ -36,10 +40,9 @@ app.get("/", async (req, res) => {
       city: generateRandomCity(),
       isManager: generateRandomBoolean(),
     });
-    await employee.save();
+    employee.save();
   }
-  res.send("Data Generated!");
-});
+}
 
 function generateRandomName() {
   let Names = [

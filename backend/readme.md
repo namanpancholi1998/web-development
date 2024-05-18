@@ -44,3 +44,11 @@
 2. Create a express app with mongoose to achieve it.
 3. Every time the button is clicked, you should clear the collection and generate 10 records.
 ```
+
+## ReadUps
+
+for locking in mongodb
+https://www.mongodb.com/docs/manual/core/transactions/#transactions
+
+for Node.js Concurrency
+https://www.apptension.com/blog-posts/node-js-concurrency#:~:text=js%20Concurrency%20is%20the%20capability,as%20they%20become%20ready%20efficiently.

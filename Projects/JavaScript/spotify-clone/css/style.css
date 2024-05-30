@@ -66,7 +66,7 @@ body {
 
 /* songs list */
 .songs_list {
-  height: 294px;
+  height: 250px;
   overflow: auto;
   margin: 14px 0;
 }

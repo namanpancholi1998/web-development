@@ -10,7 +10,8 @@ In my journey to master coding, I embarked on a project that entailed crafting a
 
 ## Features
 
-- Play, pause, skip to next or previous song functionalities.
+<!-- - Play, pause, skip to next or previous song functionalities. -->
+
 - Adjust volume using a volume slider.
 - Responsive design for various devices.
 - Display of popular artists.

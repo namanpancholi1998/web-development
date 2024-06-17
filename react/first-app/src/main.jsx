@@ -5,7 +5,8 @@ import ReactDOM from "react-dom/client";
 // import App from "./use_ref/App.jsx";
 // import App from "./conditional_rendering/App.jsx";
 // import App from "./exercise/display_the-cards/App.jsx";
-import App from "./handling_events/App.jsx";
+// import App from "./handling_events/App.jsx";
+import App from "./TodoListProj/App.jsx";
 
 import "./index.css";
 

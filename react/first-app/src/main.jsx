@@ -8,7 +8,10 @@ import ReactDOM from "react-dom/client";
 // import App from "./handling_events/App.jsx";
 // import App from "./TodoListProj/App.jsx";
 // import App from "./router/App.jsx";
-import App from "./context/App.jsx";
+// import App from "./context/App.jsx";
+// import App from "./useMemo/App.jsx";
+// import App from "./useCallback/App.jsx";
+import App from "./handlingForms/App.jsx";
 
 import "./index.css";
 

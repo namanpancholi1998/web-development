@@ -9,3 +9,8 @@
 - We can split our app into multiple components and reuse those components.
 - React uses a virtual DOM to efficiently update the UI which is better than updating content using DOM Manipulation.
 - Debugging and maintenances is easy.
+
+## React Library
+
+- https://www.npmjs.com/package/framer-motion
+- https://react-hook-form.com/get-started

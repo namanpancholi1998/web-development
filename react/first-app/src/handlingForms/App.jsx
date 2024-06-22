@@ -5,7 +5,7 @@ export default function App() {
   const {
     register,
     handleSubmit,
-    watch,
+    setError,
     formState: { errors, isSubmitting },
   } = useForm();
 
@@ -17,8 +17,21 @@ export default function App() {
     });
   };
   const onSubmit = async (data) => {
-    await delay(5);
-    console.log(data);
+    let r = await fetch("http://localhost:3000/", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+    let rs = await r.text();
+    console.log(data, res);
+
+    // await delay(5); // simulate network delay
+    // if (data.username !== "Naman") {
+    //   setError("username", {
+    //     type: "manual",
+    //     message: "This username is Invalid",
+    //   });
+    // }
+    // console.log(data);
   };
 
   return (
@@ -71,6 +84,9 @@ export default function App() {
           )}
           <br />
           <input type="submit" value="submit" disabled={isSubmitting} />
+          {errors.myForm && (
+            <span className="text-red-600">{errors.myForm.message}</span>
+          )}
         </form>
       </div>
     </>

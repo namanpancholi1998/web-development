@@ -19,10 +19,13 @@ export default function App() {
   const onSubmit = async (data) => {
     let r = await fetch("http://localhost:3000/", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
     });
     let rs = await r.text();
-    console.log(data, res);
+    console.log(data, rs);
 
     // await delay(5); // simulate network delay
     // if (data.username !== "Naman") {

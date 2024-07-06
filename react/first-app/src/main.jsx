@@ -12,9 +12,10 @@ import ReactDOM from "react-dom/client";
 // import App from "./useMemo/App.jsx";
 // import App from "./useCallback/App.jsx";
 // import App from "./handlingForms/App.jsx";
-import App from "./redux/App.jsx";
-import store from "./redux/store.js";
-import Provider from "react-redux";
+//Redux below three inputs
+// import App from "./redux/App.jsx";
+// import store from "./redux/store.js";
+// import Provider from "react-redux";
 
 import "./index.css";
 

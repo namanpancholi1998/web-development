@@ -10,19 +10,19 @@ function Navbar() {
           <span className="text-green-400">Keys&lt;/&gt; </span>
         </div>
 
-        <ul className="flex gap-5">
+        <ul className="flex gap-5 shift">
           <li>
-            <a href="" className="hover:font-bold">
+            <a href="" className="text-slate-300 hover:text-white">
               Home
             </a>
           </li>
           <li>
-            <a href="" className="hover:font-bold">
+            <a href="" className="text-slate-300 hover:text-white">
               About
             </a>
           </li>
           <li>
-            <a href="" className="hover:font-bold">
+            <a href="" className="text-slate-300 hover:text-white">
               Contact
             </a>
           </li>

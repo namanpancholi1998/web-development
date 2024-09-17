@@ -2,7 +2,7 @@
     Dummy Data Generator -> in this format in a collection called Employees in a DB called company 
 
     {
-        name: "naman",
+        name: "irshad",
         salary: 45000,
         language: "JavaScript",
         city: "New York",

@@ -40,11 +40,20 @@ function Manager() {
     });
   };
 
+  const handleSiteClick = (siteName) => {
+    let site = `https://${siteName}.com`;
+
+    window.open(site, "_blank");
+  };
+
   return (
     <>
+      {/* background */}
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]"></div>
       </div>
+
+      {/* form */}
       <div className="mx-auto max-w-4xl">
         <h1 className="text-3xl text-center ">Password Manager</h1>
         <p className="text-center text-lg text-green-500">
@@ -84,6 +93,7 @@ function Manager() {
               {showPassword ? (
                 <span className="absolute right-4 top-1/2 -translate-y-1/2">
                   <FaEye
+                    className="hover:cursor-pointer"
                     onClick={() => {
                       setShowPassword(false);
                     }}
@@ -92,6 +102,7 @@ function Manager() {
               ) : (
                 <span className="absolute right-4 top-1/2 -translate-y-1/2">
                   <FaEyeSlash
+                    className="hover:cursor-pointer"
                     onClick={() => {
                       setShowPassword(true);
                     }}
@@ -101,6 +112,7 @@ function Manager() {
             </div>
           </div>
 
+          {/* Add Password */}
           <div className="flex justify-center">
             <button
               onClick={savePassword}
@@ -114,36 +126,42 @@ function Manager() {
             </button>
           </div>
 
+          {/* Password Table */}
           <div className="">
-            <h2 className="mb-4">Your Passwords</h2>
-            <table className="table-auto w-full">
-              <thead className="text-center bg-green-700 text-white ">
-                <tr>
-                  <th>Site Name</th>
-                  <th>Email</th>
-                  <th>Password</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="text-center w-32">
-                    The Sliding Mr. Bones (Next Stop, Pottersville)
-                  </td>
-                  <td className="text-center w-32">Malcolm Lockyer</td>
-                  <td className="text-center w-32">1961</td>
-                </tr>
-                <tr>
-                  <td className="text-center w-32">Witchy Woman</td>
-                  <td className="text-center w-32">The Eagles</td>
-                  <td className="text-center w-32">1972</td>
-                </tr>
-                <tr>
-                  <td className="text-center w-32">Shining Star</td>
-                  <td className="text-center w-32">Earth, Wind, and Fire</td>
-                  <td className="text-center w-32">1975</td>
-                </tr>
-              </tbody>
-            </table>
+            <h2 className="mb-4 font-bold text-2xl py-4">Your Passwords</h2>
+            {passwordArray.length === 0 ? (
+              <div>No Passwords Found</div>
+            ) : (
+              <table className="table-auto w-full rounded-md overflow-hidden">
+                <thead className="text-center bg-sky-700 text-white ">
+                  <tr>
+                    <th className="py-3">Site Name</th>
+                    <th className="py-3">Email</th>
+                    <th className="py-3">Password</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-blue-200">
+                  {passwordArray.map((item) => {
+                    return (
+                      <tr key={item.id}>
+                        <td className="py-2 text-center">
+                          <a
+                            href="#"
+                            onClick={() =>
+                              handleSiteClick(item.siteName.trim())
+                            }
+                          >
+                            {item.siteName}
+                          </a>
+                        </td>
+                        <td className="py-2 text-center">{item.email}</td>
+                        <td className="py-2 text-center">{item.password}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            )}
           </div>
         </div>
       </div>
